@@ -1,0 +1,564 @@
+2024-06-06 15:21:51,920: asyncio: INFO: [MLTrader] Executing the initialize lifecycle method
+2024-06-06 15:21:52,129: alpaca.trading.stream: ERROR: error during websocket communication: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/alpaca/trading/stream.py", line 168, in _run_forever
+    await self._start_ws()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/alpaca/trading/stream.py", line 128, in _start_ws
+    await self._connect()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/alpaca/trading/stream.py", line 59, in _connect
+    self._ws = await websockets.connect(self._endpoint, **self._websocket_params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/websockets/legacy/client.py", line 647, in __await_impl_timeout__
+    return await self.__await_impl__()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/websockets/legacy/client.py", line 651, in __await_impl__
+    _transport, _protocol = await self._create_connection()
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py", line 1149, in create_connection
+    transport, protocol = await self._create_connection_transport(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py", line 1182, in _create_connection_transport
+    await waiter
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/sslproto.py", line 578, in _on_handshake_complete
+    raise handshake_exc
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/sslproto.py", line 560, in _do_handshake
+    self._sslobj.do_handshake()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/ssl.py", line 917, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)
+2024-06-06 15:21:52,165: alpaca.trading.stream: INFO: starting trading websocket connection
+2024-06-06 15:21:52,395: root: INFO: Current backtesting datetime 2023-12-15 08:30:00-05:00
+2024-06-06 15:21:52,397: asyncio: INFO: [MLTrader] Executing the before_market_opens lifecycle method
+2024-06-06 15:21:52,397: root: INFO: Current backtesting datetime 2023-12-15 09:30:00-05:00
+2024-06-06 15:21:52,397: asyncio: INFO: [MLTrader] Executing the before_starting_trading lifecycle method
+2024-06-06 15:21:52,397: asyncio: INFO: [MLTrader] [34mExecuting the on_trading_iteration lifecycle method at 2024-06-06 15:21:52[0m
+2024-06-06 15:21:52,398: asyncio: INFO: [MLTrader] [32mNew order was created: market order of | 10 SPY buy | with status new[0m
+2024-06-06 15:21:52,401: asyncio: INFO: [MLTrader] [34mTrading iteration ended at 2024-06-06 15:21:52[0m
+2024-06-06 15:21:52,401: asyncio: INFO: [MLTrader] Getting historical prices for SPY, 1 bars, 
+2024-06-06 15:21:52,401: root: WARNING: quote is not implemented for YahooData, but USD was passed as the quote
+2024-06-06 15:21:52,441: alpaca.trading.stream: ERROR: error during websocket communication: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/alpaca/trading/stream.py", line 168, in _run_forever
+    await self._start_ws()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/alpaca/trading/stream.py", line 128, in _start_ws
+    await self._connect()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/alpaca/trading/stream.py", line 59, in _connect
+    self._ws = await websockets.connect(self._endpoint, **self._websocket_params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/websockets/legacy/client.py", line 647, in __await_impl_timeout__
+    return await self.__await_impl__()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/websockets/legacy/client.py", line 651, in __await_impl__
+    _transport, _protocol = await self._create_connection()
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py", line 1149, in create_connection
+    transport, protocol = await self._create_connection_transport(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py", line 1182, in _create_connection_transport
+    await waiter
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/sslproto.py", line 578, in _on_handshake_complete
+    raise handshake_exc
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/sslproto.py", line 560, in _do_handshake
+    self._sslobj.do_handshake()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/ssl.py", line 917, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)
+2024-06-06 15:21:52,453: alpaca.trading.stream: INFO: starting trading websocket connection
+2024-06-06 15:21:52,669: alpaca.trading.stream: ERROR: error during websocket communication: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/alpaca/trading/stream.py", line 168, in _run_forever
+    await self._start_ws()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/alpaca/trading/stream.py", line 128, in _start_ws
+    await self._connect()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/alpaca/trading/stream.py", line 59, in _connect
+    self._ws = await websockets.connect(self._endpoint, **self._websocket_params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/websockets/legacy/client.py", line 647, in __await_impl_timeout__
+    return await self.__await_impl__()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/websockets/legacy/client.py", line 651, in __await_impl__
+    _transport, _protocol = await self._create_connection()
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py", line 1149, in create_connection
+    transport, protocol = await self._create_connection_transport(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py", line 1182, in _create_connection_transport
+    await waiter
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/sslproto.py", line 578, in _on_handshake_complete
+    raise handshake_exc
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/sslproto.py", line 560, in _do_handshake
+    self._sslobj.do_handshake()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/ssl.py", line 917, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)
+2024-06-06 15:21:52,681: alpaca.trading.stream: INFO: starting trading websocket connection
+2024-06-06 15:21:52,844: root: WARNING: quote is not implemented for YahooData, but USD was passed as the quote
+2024-06-06 15:21:52,844: asyncio: INFO: [MLTrader] [32mOrder was filled: market order of | 10 SPY buy | at price $469.49 with status fill[0m
+2024-06-06 15:21:52,845: asyncio: INFO: [MLTrader] [34mSleeping for 86400 seconds[0m
+2024-06-06 15:21:52,846: root: INFO: Current backtesting datetime 2023-12-15 16:00:00-05:00
+2024-06-06 15:21:52,846: root: INFO: Current backtesting datetime 2023-12-16 09:30:00-05:00
+2024-06-06 15:21:52,847: asyncio: INFO: [MLTrader] [34mThe market is not currently open, skipping this trading iteration[0m
+2024-06-06 15:21:52,847: root: INFO: Current backtesting datetime 2023-12-16 09:29:00-05:00
+2024-06-06 15:21:52,847: root: INFO: Current backtesting datetime 2023-12-16 09:29:00-05:00
+2024-06-06 15:21:52,847: asyncio: INFO: [MLTrader] Executing the after_market_closes lifecycle method
+2024-06-06 15:21:52,848: root: INFO: Current backtesting datetime 2023-12-18 08:30:00-05:00
+2024-06-06 15:21:52,848: root: WARNING: quote is not implemented for YahooData, but USD was passed as the quote
+2024-06-06 15:21:52,848: root: WARNING: quote is not implemented for YahooData, but USD was passed as the quote
+2024-06-06 15:21:52,848: asyncio: INFO: [MLTrader] Executing the before_market_opens lifecycle method
+2024-06-06 15:21:52,849: root: INFO: Current backtesting datetime 2023-12-18 09:30:00-05:00
+2024-06-06 15:21:52,849: asyncio: INFO: [MLTrader] Executing the before_starting_trading lifecycle method
+2024-06-06 15:21:52,849: asyncio: INFO: [MLTrader] [34mExecuting the on_trading_iteration lifecycle method at 2024-06-06 15:21:52[0m
+2024-06-06 15:21:52,849: asyncio: INFO: [MLTrader] [34mTrading iteration ended at 2024-06-06 15:21:52[0m
+2024-06-06 15:21:52,850: asyncio: INFO: [MLTrader] [34mSleeping for 86400 seconds[0m
+2024-06-06 15:21:52,850: root: INFO: Current backtesting datetime 2023-12-18 16:00:00-05:00
+2024-06-06 15:21:52,850: root: INFO: Current backtesting datetime 2023-12-19 09:30:00-05:00
+2024-06-06 15:21:52,850: asyncio: INFO: [MLTrader] [34mExecuting the on_trading_iteration lifecycle method at 2024-06-06 15:21:52[0m
+2024-06-06 15:21:52,850: asyncio: INFO: [MLTrader] [34mTrading iteration ended at 2024-06-06 15:21:52[0m
+2024-06-06 15:21:52,851: asyncio: INFO: [MLTrader] [34mSleeping for 86400 seconds[0m
+2024-06-06 15:21:52,851: root: INFO: Current backtesting datetime 2023-12-19 16:00:00-05:00
+2024-06-06 15:21:52,851: root: INFO: Current backtesting datetime 2023-12-20 09:30:00-05:00
+2024-06-06 15:21:52,851: asyncio: INFO: [MLTrader] [34mExecuting the on_trading_iteration lifecycle method at 2024-06-06 15:21:52[0m
+2024-06-06 15:21:52,852: asyncio: INFO: [MLTrader] [34mTrading iteration ended at 2024-06-06 15:21:52[0m
+2024-06-06 15:21:52,852: asyncio: INFO: [MLTrader] [34mSleeping for 86400 seconds[0m
+2024-06-06 15:21:52,852: root: INFO: Current backtesting datetime 2023-12-20 16:00:00-05:00
+2024-06-06 15:21:52,853: root: INFO: Current backtesting datetime 2023-12-21 09:30:00-05:00
+2024-06-06 15:21:52,853: asyncio: INFO: [MLTrader] [34mExecuting the on_trading_iteration lifecycle method at 2024-06-06 15:21:52[0m
+2024-06-06 15:21:52,854: asyncio: INFO: [MLTrader] [34mTrading iteration ended at 2024-06-06 15:21:52[0m
+2024-06-06 15:21:52,854: asyncio: INFO: [MLTrader] [34mSleeping for 86400 seconds[0m
+2024-06-06 15:21:52,854: root: INFO: Current backtesting datetime 2023-12-21 16:00:00-05:00
+2024-06-06 15:21:52,854: root: INFO: Current backtesting datetime 2023-12-22 09:30:00-05:00
+2024-06-06 15:21:52,855: asyncio: INFO: [MLTrader] [34mExecuting the on_trading_iteration lifecycle method at 2024-06-06 15:21:52[0m
+2024-06-06 15:21:52,855: asyncio: INFO: [MLTrader] [34mTrading iteration ended at 2024-06-06 15:21:52[0m
+2024-06-06 15:21:52,855: asyncio: INFO: [MLTrader] [34mSleeping for 86400 seconds[0m
+2024-06-06 15:21:52,856: root: INFO: Current backtesting datetime 2023-12-22 16:00:00-05:00
+2024-06-06 15:21:52,856: root: INFO: Current backtesting datetime 2023-12-23 09:30:00-05:00
+2024-06-06 15:21:52,856: asyncio: INFO: [MLTrader] [34mThe market is not currently open, skipping this trading iteration[0m
+2024-06-06 15:21:52,856: root: INFO: Current backtesting datetime 2023-12-23 09:29:00-05:00
+2024-06-06 15:21:52,857: root: INFO: Current backtesting datetime 2023-12-23 09:29:00-05:00
+2024-06-06 15:21:52,857: asyncio: INFO: [MLTrader] Executing the after_market_closes lifecycle method
+2024-06-06 15:21:52,857: root: INFO: Current backtesting datetime 2023-12-26 08:30:00-05:00
+2024-06-06 15:21:52,857: root: WARNING: quote is not implemented for YahooData, but USD was passed as the quote
+2024-06-06 15:21:52,858: root: WARNING: quote is not implemented for YahooData, but USD was passed as the quote
+2024-06-06 15:21:52,858: asyncio: INFO: [MLTrader] Executing the before_market_opens lifecycle method
+2024-06-06 15:21:52,858: root: INFO: Current backtesting datetime 2023-12-26 09:30:00-05:00
+2024-06-06 15:21:52,858: asyncio: INFO: [MLTrader] Executing the before_starting_trading lifecycle method
+2024-06-06 15:21:52,859: asyncio: INFO: [MLTrader] [34mExecuting the on_trading_iteration lifecycle method at 2024-06-06 15:21:52[0m
+2024-06-06 15:21:52,859: asyncio: INFO: [MLTrader] [34mTrading iteration ended at 2024-06-06 15:21:52[0m
+2024-06-06 15:21:52,859: asyncio: INFO: [MLTrader] [34mSleeping for 86400 seconds[0m
+2024-06-06 15:21:52,859: root: INFO: Current backtesting datetime 2023-12-26 16:00:00-05:00
+2024-06-06 15:21:52,860: root: INFO: Current backtesting datetime 2023-12-27 09:30:00-05:00
+2024-06-06 15:21:52,860: asyncio: INFO: [MLTrader] [34mExecuting the on_trading_iteration lifecycle method at 2024-06-06 15:21:52[0m
+2024-06-06 15:21:52,860: asyncio: INFO: [MLTrader] [34mTrading iteration ended at 2024-06-06 15:21:52[0m
+2024-06-06 15:21:52,860: asyncio: INFO: [MLTrader] [34mSleeping for 86400 seconds[0m
+2024-06-06 15:21:52,861: root: INFO: Current backtesting datetime 2023-12-27 16:00:00-05:00
+2024-06-06 15:21:52,861: root: INFO: Current backtesting datetime 2023-12-28 09:30:00-05:00
+2024-06-06 15:21:52,861: asyncio: INFO: [MLTrader] [34mExecuting the on_trading_iteration lifecycle method at 2024-06-06 15:21:52[0m
+2024-06-06 15:21:52,861: asyncio: INFO: [MLTrader] [34mTrading iteration ended at 2024-06-06 15:21:52[0m
+2024-06-06 15:21:52,861: asyncio: INFO: [MLTrader] [34mSleeping for 86400 seconds[0m
+2024-06-06 15:21:52,862: root: INFO: Current backtesting datetime 2023-12-28 16:00:00-05:00
+2024-06-06 15:21:52,862: root: INFO: Current backtesting datetime 2023-12-29 09:30:00-05:00
+2024-06-06 15:21:52,862: asyncio: INFO: [MLTrader] [34mExecuting the on_trading_iteration lifecycle method at 2024-06-06 15:21:52[0m
+2024-06-06 15:21:52,863: asyncio: INFO: [MLTrader] [34mTrading iteration ended at 2024-06-06 15:21:52[0m
+2024-06-06 15:21:52,863: asyncio: INFO: [MLTrader] [34mSleeping for 86400 seconds[0m
+2024-06-06 15:21:52,863: root: INFO: Current backtesting datetime 2023-12-29 16:00:00-05:00
+2024-06-06 15:21:52,863: root: INFO: Current backtesting datetime 2023-12-30 09:30:00-05:00
+2024-06-06 15:21:52,864: asyncio: INFO: [MLTrader] [34mThe market is not currently open, skipping this trading iteration[0m
+2024-06-06 15:21:52,864: root: INFO: Current backtesting datetime 2023-12-30 09:29:00-05:00
+2024-06-06 15:21:52,864: root: INFO: Current backtesting datetime 2023-12-30 09:29:00-05:00
+2024-06-06 15:21:52,864: asyncio: INFO: [MLTrader] Executing the after_market_closes lifecycle method
+2024-06-06 15:21:52,865: root: INFO: Current backtesting datetime 2024-01-02 08:30:00-05:00
+2024-06-06 15:21:52,865: asyncio: INFO: [MLTrader] Executing the on_strategy_end lifecycle method
+2024-06-06 15:21:52,895: alpaca.trading.stream: ERROR: error during websocket communication: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/alpaca/trading/stream.py", line 168, in _run_forever
+    await self._start_ws()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/alpaca/trading/stream.py", line 128, in _start_ws
+    await self._connect()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/alpaca/trading/stream.py", line 59, in _connect
+    self._ws = await websockets.connect(self._endpoint, **self._websocket_params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/websockets/legacy/client.py", line 647, in __await_impl_timeout__
+    return await self.__await_impl__()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/websockets/legacy/client.py", line 651, in __await_impl__
+    _transport, _protocol = await self._create_connection()
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py", line 1149, in create_connection
+    transport, protocol = await self._create_connection_transport(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py", line 1182, in _create_connection_transport
+    await waiter
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/sslproto.py", line 578, in _on_handshake_complete
+    raise handshake_exc
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/sslproto.py", line 560, in _do_handshake
+    self._sslobj.do_handshake()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/ssl.py", line 917, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)
+2024-06-06 15:21:52,907: alpaca.trading.stream: INFO: starting trading websocket connection
+2024-06-06 15:21:53,120: alpaca.trading.stream: ERROR: error during websocket communication: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/alpaca/trading/stream.py", line 168, in _run_forever
+    await self._start_ws()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/alpaca/trading/stream.py", line 128, in _start_ws
+    await self._connect()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/alpaca/trading/stream.py", line 59, in _connect
+    self._ws = await websockets.connect(self._endpoint, **self._websocket_params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/websockets/legacy/client.py", line 647, in __await_impl_timeout__
+    return await self.__await_impl__()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/websockets/legacy/client.py", line 651, in __await_impl__
+    _transport, _protocol = await self._create_connection()
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py", line 1149, in create_connection
+    transport, protocol = await self._create_connection_transport(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py", line 1182, in _create_connection_transport
+    await waiter
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/sslproto.py", line 578, in _on_handshake_complete
+    raise handshake_exc
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/sslproto.py", line 560, in _do_handshake
+    self._sslobj.do_handshake()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/ssl.py", line 917, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)
+2024-06-06 15:21:53,163: alpaca.trading.stream: INFO: starting trading websocket connection
+2024-06-06 15:21:53,385: alpaca.trading.stream: ERROR: error during websocket communication: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/alpaca/trading/stream.py", line 168, in _run_forever
+    await self._start_ws()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/alpaca/trading/stream.py", line 128, in _start_ws
+    await self._connect()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/alpaca/trading/stream.py", line 59, in _connect
+    self._ws = await websockets.connect(self._endpoint, **self._websocket_params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/websockets/legacy/client.py", line 647, in __await_impl_timeout__
+    return await self.__await_impl__()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/websockets/legacy/client.py", line 651, in __await_impl__
+    _transport, _protocol = await self._create_connection()
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py", line 1149, in create_connection
+    transport, protocol = await self._create_connection_transport(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py", line 1182, in _create_connection_transport
+    await waiter
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/sslproto.py", line 578, in _on_handshake_complete
+    raise handshake_exc
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/sslproto.py", line 560, in _do_handshake
+    self._sslobj.do_handshake()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/ssl.py", line 917, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)
+2024-06-06 15:21:53,398: alpaca.trading.stream: INFO: starting trading websocket connection
+2024-06-06 15:21:53,455: root: INFO: Backtesting finished
+2024-06-06 15:21:53,634: alpaca.trading.stream: ERROR: error during websocket communication: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/alpaca/trading/stream.py", line 168, in _run_forever
+    await self._start_ws()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/alpaca/trading/stream.py", line 128, in _start_ws
+    await self._connect()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/alpaca/trading/stream.py", line 59, in _connect
+    self._ws = await websockets.connect(self._endpoint, **self._websocket_params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/websockets/legacy/client.py", line 647, in __await_impl_timeout__
+    return await self.__await_impl__()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/websockets/legacy/client.py", line 651, in __await_impl__
+    _transport, _protocol = await self._create_connection()
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py", line 1149, in create_connection
+    transport, protocol = await self._create_connection_transport(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py", line 1182, in _create_connection_transport
+    await waiter
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/sslproto.py", line 578, in _on_handshake_complete
+    raise handshake_exc
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/sslproto.py", line 560, in _do_handshake
+    self._sslobj.do_handshake()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/ssl.py", line 917, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)
+2024-06-06 15:21:53,646: alpaca.trading.stream: INFO: starting trading websocket connection
+2024-06-06 15:21:53,876: alpaca.trading.stream: ERROR: error during websocket communication: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/alpaca/trading/stream.py", line 168, in _run_forever
+    await self._start_ws()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/alpaca/trading/stream.py", line 128, in _start_ws
+    await self._connect()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/alpaca/trading/stream.py", line 59, in _connect
+    self._ws = await websockets.connect(self._endpoint, **self._websocket_params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/websockets/legacy/client.py", line 647, in __await_impl_timeout__
+    return await self.__await_impl__()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/websockets/legacy/client.py", line 651, in __await_impl__
+    _transport, _protocol = await self._create_connection()
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py", line 1149, in create_connection
+    transport, protocol = await self._create_connection_transport(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py", line 1182, in _create_connection_transport
+    await waiter
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/sslproto.py", line 578, in _on_handshake_complete
+    raise handshake_exc
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/sslproto.py", line 560, in _do_handshake
+    self._sslobj.do_handshake()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/ssl.py", line 917, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)
+2024-06-06 15:21:53,888: alpaca.trading.stream: INFO: starting trading websocket connection
+2024-06-06 15:21:54,111: alpaca.trading.stream: ERROR: error during websocket communication: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/alpaca/trading/stream.py", line 168, in _run_forever
+    await self._start_ws()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/alpaca/trading/stream.py", line 128, in _start_ws
+    await self._connect()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/alpaca/trading/stream.py", line 59, in _connect
+    self._ws = await websockets.connect(self._endpoint, **self._websocket_params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/websockets/legacy/client.py", line 647, in __await_impl_timeout__
+    return await self.__await_impl__()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/websockets/legacy/client.py", line 651, in __await_impl__
+    _transport, _protocol = await self._create_connection()
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py", line 1149, in create_connection
+    transport, protocol = await self._create_connection_transport(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py", line 1182, in _create_connection_transport
+    await waiter
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/sslproto.py", line 578, in _on_handshake_complete
+    raise handshake_exc
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/sslproto.py", line 560, in _do_handshake
+    self._sslobj.do_handshake()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/ssl.py", line 917, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)
+2024-06-06 15:21:54,123: alpaca.trading.stream: INFO: starting trading websocket connection
+2024-06-06 15:21:54,337: alpaca.trading.stream: ERROR: error during websocket communication: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/alpaca/trading/stream.py", line 168, in _run_forever
+    await self._start_ws()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/alpaca/trading/stream.py", line 128, in _start_ws
+    await self._connect()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/alpaca/trading/stream.py", line 59, in _connect
+    self._ws = await websockets.connect(self._endpoint, **self._websocket_params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/websockets/legacy/client.py", line 647, in __await_impl_timeout__
+    return await self.__await_impl__()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/websockets/legacy/client.py", line 651, in __await_impl__
+    _transport, _protocol = await self._create_connection()
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py", line 1149, in create_connection
+    transport, protocol = await self._create_connection_transport(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py", line 1182, in _create_connection_transport
+    await waiter
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/sslproto.py", line 578, in _on_handshake_complete
+    raise handshake_exc
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/sslproto.py", line 560, in _do_handshake
+    self._sslobj.do_handshake()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/ssl.py", line 917, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)
+2024-06-06 15:21:54,350: alpaca.trading.stream: INFO: starting trading websocket connection
+2024-06-06 15:21:54,594: alpaca.trading.stream: ERROR: error during websocket communication: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/alpaca/trading/stream.py", line 168, in _run_forever
+    await self._start_ws()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/alpaca/trading/stream.py", line 128, in _start_ws
+    await self._connect()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/alpaca/trading/stream.py", line 59, in _connect
+    self._ws = await websockets.connect(self._endpoint, **self._websocket_params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/websockets/legacy/client.py", line 647, in __await_impl_timeout__
+    return await self.__await_impl__()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/websockets/legacy/client.py", line 651, in __await_impl__
+    _transport, _protocol = await self._create_connection()
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py", line 1149, in create_connection
+    transport, protocol = await self._create_connection_transport(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py", line 1182, in _create_connection_transport
+    await waiter
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/sslproto.py", line 578, in _on_handshake_complete
+    raise handshake_exc
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/sslproto.py", line 560, in _do_handshake
+    self._sslobj.do_handshake()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/ssl.py", line 917, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)
+2024-06-06 15:21:54,605: alpaca.trading.stream: INFO: starting trading websocket connection
+2024-06-06 15:21:54,824: alpaca.trading.stream: ERROR: error during websocket communication: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/alpaca/trading/stream.py", line 168, in _run_forever
+    await self._start_ws()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/alpaca/trading/stream.py", line 128, in _start_ws
+    await self._connect()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/alpaca/trading/stream.py", line 59, in _connect
+    self._ws = await websockets.connect(self._endpoint, **self._websocket_params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/websockets/legacy/client.py", line 647, in __await_impl_timeout__
+    return await self.__await_impl__()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/websockets/legacy/client.py", line 651, in __await_impl__
+    _transport, _protocol = await self._create_connection()
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py", line 1149, in create_connection
+    transport, protocol = await self._create_connection_transport(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py", line 1182, in _create_connection_transport
+    await waiter
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/sslproto.py", line 578, in _on_handshake_complete
+    raise handshake_exc
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/sslproto.py", line 560, in _do_handshake
+    self._sslobj.do_handshake()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/ssl.py", line 917, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)
+2024-06-06 15:21:54,836: alpaca.trading.stream: INFO: starting trading websocket connection
+2024-06-06 15:21:55,138: alpaca.trading.stream: ERROR: error during websocket communication: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/alpaca/trading/stream.py", line 168, in _run_forever
+    await self._start_ws()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/alpaca/trading/stream.py", line 128, in _start_ws
+    await self._connect()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/alpaca/trading/stream.py", line 59, in _connect
+    self._ws = await websockets.connect(self._endpoint, **self._websocket_params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/websockets/legacy/client.py", line 647, in __await_impl_timeout__
+    return await self.__await_impl__()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/websockets/legacy/client.py", line 651, in __await_impl__
+    _transport, _protocol = await self._create_connection()
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py", line 1149, in create_connection
+    transport, protocol = await self._create_connection_transport(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py", line 1182, in _create_connection_transport
+    await waiter
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/sslproto.py", line 578, in _on_handshake_complete
+    raise handshake_exc
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/sslproto.py", line 560, in _do_handshake
+    self._sslobj.do_handshake()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/ssl.py", line 917, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)
+2024-06-06 15:21:55,159: alpaca.trading.stream: INFO: starting trading websocket connection
+2024-06-06 15:21:55,378: alpaca.trading.stream: ERROR: error during websocket communication: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/alpaca/trading/stream.py", line 168, in _run_forever
+    await self._start_ws()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/alpaca/trading/stream.py", line 128, in _start_ws
+    await self._connect()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/alpaca/trading/stream.py", line 59, in _connect
+    self._ws = await websockets.connect(self._endpoint, **self._websocket_params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/websockets/legacy/client.py", line 647, in __await_impl_timeout__
+    return await self.__await_impl__()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/websockets/legacy/client.py", line 651, in __await_impl__
+    _transport, _protocol = await self._create_connection()
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py", line 1149, in create_connection
+    transport, protocol = await self._create_connection_transport(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py", line 1182, in _create_connection_transport
+    await waiter
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/sslproto.py", line 578, in _on_handshake_complete
+    raise handshake_exc
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/sslproto.py", line 560, in _do_handshake
+    self._sslobj.do_handshake()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/ssl.py", line 917, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)
+2024-06-06 15:21:55,395: alpaca.trading.stream: INFO: starting trading websocket connection
+2024-06-06 15:21:55,619: alpaca.trading.stream: ERROR: error during websocket communication: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/alpaca/trading/stream.py", line 168, in _run_forever
+    await self._start_ws()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/alpaca/trading/stream.py", line 128, in _start_ws
+    await self._connect()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/alpaca/trading/stream.py", line 59, in _connect
+    self._ws = await websockets.connect(self._endpoint, **self._websocket_params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/websockets/legacy/client.py", line 647, in __await_impl_timeout__
+    return await self.__await_impl__()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/websockets/legacy/client.py", line 651, in __await_impl__
+    _transport, _protocol = await self._create_connection()
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py", line 1149, in create_connection
+    transport, protocol = await self._create_connection_transport(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py", line 1182, in _create_connection_transport
+    await waiter
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/sslproto.py", line 578, in _on_handshake_complete
+    raise handshake_exc
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/sslproto.py", line 560, in _do_handshake
+    self._sslobj.do_handshake()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/ssl.py", line 917, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)
+2024-06-06 15:21:55,638: alpaca.trading.stream: INFO: starting trading websocket connection
+2024-06-06 15:21:55,863: alpaca.trading.stream: ERROR: error during websocket communication: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/alpaca/trading/stream.py", line 168, in _run_forever
+    await self._start_ws()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/alpaca/trading/stream.py", line 128, in _start_ws
+    await self._connect()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/alpaca/trading/stream.py", line 59, in _connect
+    self._ws = await websockets.connect(self._endpoint, **self._websocket_params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/websockets/legacy/client.py", line 647, in __await_impl_timeout__
+    return await self.__await_impl__()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/websockets/legacy/client.py", line 651, in __await_impl__
+    _transport, _protocol = await self._create_connection()
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py", line 1149, in create_connection
+    transport, protocol = await self._create_connection_transport(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py", line 1182, in _create_connection_transport
+    await waiter
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/sslproto.py", line 578, in _on_handshake_complete
+    raise handshake_exc
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/sslproto.py", line 560, in _do_handshake
+    self._sslobj.do_handshake()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/ssl.py", line 917, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)
+2024-06-06 15:21:55,875: alpaca.trading.stream: INFO: starting trading websocket connection
+2024-06-06 15:21:56,096: alpaca.trading.stream: ERROR: error during websocket communication: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/alpaca/trading/stream.py", line 168, in _run_forever
+    await self._start_ws()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/alpaca/trading/stream.py", line 128, in _start_ws
+    await self._connect()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/alpaca/trading/stream.py", line 59, in _connect
+    self._ws = await websockets.connect(self._endpoint, **self._websocket_params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/websockets/legacy/client.py", line 647, in __await_impl_timeout__
+    return await self.__await_impl__()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/websockets/legacy/client.py", line 651, in __await_impl__
+    _transport, _protocol = await self._create_connection()
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py", line 1149, in create_connection
+    transport, protocol = await self._create_connection_transport(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py", line 1182, in _create_connection_transport
+    await waiter
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/sslproto.py", line 578, in _on_handshake_complete
+    raise handshake_exc
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/sslproto.py", line 560, in _do_handshake
+    self._sslobj.do_handshake()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/ssl.py", line 917, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)
+2024-06-06 15:21:56,107: alpaca.trading.stream: INFO: starting trading websocket connection
+2024-06-06 15:21:56,191: backtest_stats: INFO: Backtest took 0:00:04.271588 for a speed of 0.000

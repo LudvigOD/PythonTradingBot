@@ -1,0 +1,46 @@
+2024-06-06 16:24:52,869: asyncio: INFO: [MLTrader] Executing the initialize lifecycle method
+2024-06-06 16:24:53,376: root: INFO: Current backtesting datetime 2023-12-15 08:30:00-05:00
+2024-06-06 16:24:53,376: asyncio: INFO: [MLTrader] Executing the before_market_opens lifecycle method
+2024-06-06 16:24:53,377: root: INFO: Current backtesting datetime 2023-12-15 09:30:00-05:00
+2024-06-06 16:24:53,377: asyncio: INFO: [MLTrader] Executing the before_starting_trading lifecycle method
+2024-06-06 16:24:53,377: asyncio: INFO: [MLTrader] [34mExecuting the on_trading_iteration lifecycle method at 2024-06-06 16:24:53[0m
+2024-06-06 16:24:53,377: root: WARNING: quote is not implemented for YahooData, but USD was passed as the quote
+2024-06-06 16:24:53,859: root: WARNING: quote is not implemented for YahooData, but USD was passed as the quote
+2024-06-06 16:24:53,859: asyncio: ERROR: [MLTrader] 'datetime.datetime' object has no attribute 'strfttime'
+2024-06-06 16:24:53,861: asyncio: ERROR: [MLTrader] Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/lumibot/strategies/strategy_executor.py", line 923, in run
+    self._run_trading_session()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/lumibot/strategies/strategy_executor.py", line 871, in _run_trading_session
+    self._on_trading_iteration()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/lumibot/strategies/strategy_executor.py", line 262, in func_output
+    result = func_input(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/lumibot/strategies/strategy_executor.py", line 286, in func_output
+    result = func_input(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/lumibot/strategies/strategy_executor.py", line 397, in _on_trading_iteration
+    raise e
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/lumibot/strategies/strategy_executor.py", line 369, in _on_trading_iteration
+    on_trading_iteration()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/lumibot/tools/decorators.py", line 62, in func_output
+    frame, result = call_function_get_frame(func_input, *args, **kwargs)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/lumibot/tools/decorators.py", line 30, in call_function_get_frame
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ludvigolunddanielsson/Programmering/workspace/PythonTradingBot/PythonTradingBot/main.py", line 51, in on_trading_iteration
+    news = self.get_news()
+           ^^^^^^^^^^^^^^^
+  File "/Users/ludvigolunddanielsson/Programmering/workspace/PythonTradingBot/PythonTradingBot/main.py", line 41, in get_news
+    today, prev_three_days = self.get_dates()
+                             ^^^^^^^^^^^^^^^^
+  File "/Users/ludvigolunddanielsson/Programmering/workspace/PythonTradingBot/PythonTradingBot/main.py", line 38, in get_dates
+    return today.strfttime('%Y-%m-%d'), prev_three_days.strfttime('%Y-%m-%d')
+           ^^^^^^^^^^^^^^^
+AttributeError: 'datetime.datetime' object has no attribute 'strfttime'. Did you mean: 'strftime'?
+
+2024-06-06 16:24:53,861: asyncio: INFO: [MLTrader] Executing the on_bot_crash event method
+2024-06-06 16:24:53,863: root: INFO: Backtesting finished
+2024-06-06 16:24:54,145: asyncio: WARNING: [MLTrader] Cannot plot returns because the strategy returns are missing
+2024-06-06 16:24:54,217: asyncio: WARNING: [MLTrader] Cannot create a tearsheet because the strategy returns are missing
+2024-06-06 16:24:54,217: backtest_stats: INFO: Backtest took 0:00:01.349263 for a speed of 0.000
