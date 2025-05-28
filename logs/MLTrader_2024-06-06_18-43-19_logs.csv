@@ -1,0 +1,44 @@
+2024-06-06 18:43:19,801: asyncio: INFO: [MLTrader] Executing the initialize lifecycle method
+2024-06-06 18:43:20,296: root: INFO: Current backtesting datetime 2023-01-03 08:30:00-05:00
+2024-06-06 18:43:20,297: asyncio: INFO: [MLTrader] Executing the before_market_opens lifecycle method
+2024-06-06 18:43:20,297: root: INFO: Current backtesting datetime 2023-01-03 09:30:00-05:00
+2024-06-06 18:43:20,298: asyncio: INFO: [MLTrader] Executing the before_starting_trading lifecycle method
+2024-06-06 18:43:20,298: asyncio: INFO: [MLTrader] [34mExecuting the on_trading_iteration lifecycle method at 2024-06-06 18:43:20[0m
+2024-06-06 18:43:20,298: root: WARNING: quote is not implemented for YahooData, but USD was passed as the quote
+2024-06-06 18:43:20,488: yfinance: ERROR: $APPL: possibly delisted; No price data found  (1d 1925-06-30 -> 2024-06-06)
+2024-06-06 18:43:20,490: root: ERROR: YAHOO did not return data for symbol APPL. Make sure this symbol is valid.
+2024-06-06 18:43:20,490: asyncio: ERROR: [MLTrader] unsupported operand type(s) for /: 'float' and 'NoneType'
+2024-06-06 18:43:20,491: asyncio: ERROR: [MLTrader] Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/lumibot/strategies/strategy_executor.py", line 923, in run
+    self._run_trading_session()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/lumibot/strategies/strategy_executor.py", line 871, in _run_trading_session
+    self._on_trading_iteration()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/lumibot/strategies/strategy_executor.py", line 262, in func_output
+    result = func_input(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/lumibot/strategies/strategy_executor.py", line 286, in func_output
+    result = func_input(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/lumibot/strategies/strategy_executor.py", line 397, in _on_trading_iteration
+    raise e
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/lumibot/strategies/strategy_executor.py", line 369, in _on_trading_iteration
+    on_trading_iteration()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/lumibot/tools/decorators.py", line 62, in func_output
+    frame, result = call_function_get_frame(func_input, *args, **kwargs)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/lumibot/tools/decorators.py", line 30, in call_function_get_frame
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ludvigolunddanielsson/Programmering/workspace/PythonTradingBot/PythonTradingBot/tradingbot.py", line 52, in on_trading_iteration
+    cash, last_price, quanity = self.position_sizing()
+                                ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ludvigolunddanielsson/Programmering/workspace/PythonTradingBot/PythonTradingBot/tradingbot.py", line 33, in position_sizing
+    quanity = round(cash * self.cash_at_risk / last_price, 0)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~
+TypeError: unsupported operand type(s) for /: 'float' and 'NoneType'
+
+2024-06-06 18:43:20,492: asyncio: INFO: [MLTrader] Executing the on_bot_crash event method
+2024-06-06 18:43:20,493: root: INFO: Backtesting finished
+2024-06-06 18:43:20,867: asyncio: WARNING: [MLTrader] Cannot plot returns because the strategy returns are missing
+2024-06-06 18:43:20,910: asyncio: WARNING: [MLTrader] Cannot create a tearsheet because the strategy returns are missing
+2024-06-06 18:43:20,910: backtest_stats: INFO: Backtest took 0:00:01.111762 for a speed of 0.000
